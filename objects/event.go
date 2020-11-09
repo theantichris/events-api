@@ -28,7 +28,7 @@ type Event struct {
 	Address     string `json:"address,omitempty"`
 	PhoneNumber string `json:"phone-number,omitempty"`
 
-	Slot *TimeSlot `gorm:"embedded" json:"slot,omitempty"`
+	TimeSlot *TimeSlot `gorm:"embedded" json:"time-slot,omitempty"`
 
 	Status EventStatus `json:"status,omitempty"`
 
