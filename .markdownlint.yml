@@ -1,0 +1,7 @@
+{
+  "default": true,
+  "no-hard-tabs": true,
+  "whitespace": true,
+  "MD003": { "style": "atx" },
+  "MD007": { "indent": 4 }
+}
