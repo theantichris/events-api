@@ -16,8 +16,8 @@ type GetRequest struct {
 // ListRequest is for getting a list of Events.
 type ListRequest struct {
 	Limit int    `json:"limit"`
-	After string `json:"after"`
-	Name  string `json:"name"` // optional name matching
+	After string `json:"after"` // for paging
+	Name  string `json:"name"`  // optional name matching
 }
 
 // CreateRequest is for creating a new Event.
