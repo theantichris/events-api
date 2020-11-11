@@ -11,13 +11,13 @@ import (
 
 // EventStore defines the database interactions for storing Events.
 type EventStore interface {
-	Get(ctx context.Context, request *objects.GetRequest) (*objects.Event, error)
-	List(ctx context.Context, request *objects.ListRequest) ([]*objects.Event, error)
-	Create(ctx context.Context, request *objects.CreateRequest) error
-	Update(ctx context.Context, request *objects.UpdateRequest) error
-	Cancel(ctx context.Context, request *objects.CancelRequest) error
-	Reschedule(ctx context.Context, request *objects.RescheduleRequest) error
-	Delete(ctx context.Context, request *objects.DeleteRequest) error
+	Get(ctx context.Context, request objects.GetRequest) (*objects.Event, error)
+	List(ctx context.Context, request objects.ListRequest) ([]*objects.Event, error)
+	Create(ctx context.Context, request objects.CreateRequest) error
+	Update(ctx context.Context, request objects.UpdateRequest) error
+	Cancel(ctx context.Context, request objects.CancelRequest) error
+	Reschedule(ctx context.Context, request objects.RescheduleRequest) error
+	Delete(ctx context.Context, request objects.DeleteRequest) error
 }
 
 func init() {
