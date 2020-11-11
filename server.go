@@ -4,6 +4,8 @@ import (
 	"log"
 	"net/http"
 
+	"github.com/theantichris/events-api/store"
+
 	"github.com/gorilla/mux"
 	"github.com/theantichris/events-api/handlers"
 )
@@ -21,8 +23,8 @@ type Args struct {
 func Run(args Args) error {
 	router := mux.NewRouter().PathPrefix("/api/v1/").Subrouter()
 
-	//st := store.NewPostgresEventStore(args.conn)
-	handler := handlers.NewEventHandler( /*st*/ )
+	st := store.NewPostgresEventStore(args.conn)
+	handler := handlers.NewEventHandler(st)
 
 	RegisterAllRoutes(router, handler)
 
