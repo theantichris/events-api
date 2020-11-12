@@ -8,7 +8,7 @@ import (
 // MaxListLimit holds the maximum number of listings.
 const MaxListLimit = 200
 
-// GetRequest is for retreiving a single Event.
+// GetRequest is for retrieving a single Event.
 type GetRequest struct {
 	ID string `json:"id"`
 }
@@ -59,11 +59,6 @@ type EventResponse struct {
 }
 
 func (e *EventResponse) Json() []byte {
-	panic("implement me")
-}
-
-// JSON serializes an EventResponse into JSON.
-func (e *EventResponse) JSON() []byte {
 	if e == nil {
 		return []byte("{}")
 	}

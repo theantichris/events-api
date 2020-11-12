@@ -35,5 +35,5 @@ type Event struct {
 	CreatedAt     time.Time `json:"created-at,omitempty"`
 	UpdatedAt     time.Time `json:"updated-at,omitempty"`
 	CanceledAt    time.Time `json:"canceled-at,omitempty"`
-	RescheduledAt time.Time `json:"reschedueled-at,omitempty"`
+	RescheduledAt time.Time `json:"rescheduled-at,omitempty"`
 }

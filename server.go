@@ -30,7 +30,7 @@ func Run(args Args) error {
 
 	log.Println("Starting server at port:", args.port)
 
-	return http.ListenAndServe(args.port, router)
+	return http.ListenAndServe(":"+args.port, router)
 }
 
 func RegisterAllRoutes(router *mux.Router, handler handlers.EventHandler) {

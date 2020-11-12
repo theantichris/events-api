@@ -61,10 +61,6 @@ type Error struct {
 	Message string
 }
 
-func (err *Error) Json() []byte {
-	panic("implement me")
-}
-
 func (err *Error) Error() string {
 	return err.String()
 }
@@ -77,8 +73,8 @@ func (err *Error) String() string {
 	return fmt.Sprintf("error: code=%s message=%s", http.StatusText(err.Code), err.Message)
 }
 
-// JSON serializes an error into JSON.
-func (err *Error) JSON() []byte {
+// Json serializes an error into JSON.
+func (err *Error) Json() []byte {
 	if err == nil {
 		return []byte("{}")
 	}
