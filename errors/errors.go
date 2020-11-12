@@ -61,6 +61,10 @@ type Error struct {
 	Message string
 }
 
+func (err *Error) Json() []byte {
+	panic("implement me")
+}
+
 func (err *Error) Error() string {
 	return err.String()
 }

@@ -58,6 +58,10 @@ type EventResponse struct {
 	Code   int      `json:"-"`
 }
 
+func (e *EventResponse) Json() []byte {
+	panic("implement me")
+}
+
 // JSON serializes an EventResponse into JSON.
 func (e *EventResponse) JSON() []byte {
 	if e == nil {
